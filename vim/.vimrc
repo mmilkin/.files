@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 Plugin 'vim-scripts/desert.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fatih/vim-go'
@@ -23,6 +24,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'lepture/vim-jinja'
 Plugin 'rust-lang/rust.vim'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 call vundle#end()
 filetype plugin indent on
@@ -46,6 +48,7 @@ set backspace=indent,eol,start
 set ruler
 set laststatus=1
 set wildmenu
+let g:go_version_warning = 0
 
 " trailing whitespace is bad
 highlight WhiteSpaceEOL ctermbg=red
@@ -71,3 +74,16 @@ autocmd BufWritePost *.py call Flake8()
 
 " rust
 let g:rustfmt_autosave = 1
+
+" vimrc
+
+"Uncomment to override defaults:
+"let g:instant_markdown_slow = 1
+"let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autoscroll = 0
+
